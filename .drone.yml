@@ -1,0 +1,6 @@
+build:
+  image: dockerepo/glide
+  commands:
+    - glide install
+    - go build
+    - go test
