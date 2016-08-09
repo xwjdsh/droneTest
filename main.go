@@ -10,7 +10,7 @@ import (
 
 func sayhelloName(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
-	fmt.Fprintf(w, "uuid:"+uuid.NewV4().String())
+	fmt.Fprintf(w, "test cache:"+uuid.NewV4().String())
 }
 func main() {
 	http.HandleFunc("/", sayhelloName)
