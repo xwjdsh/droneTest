@@ -19,8 +19,9 @@ publish:
     username: $$USERNAME
     password: $$PASSWORD
     email: iwendellsun@gmail.com
-    repo: wendell/droneTest
+    repo: wendell/drone-test
     tag: 
+      - $$BRANCH-$$COMMIT
       - latest
     load: docker/image.tar
     save:
