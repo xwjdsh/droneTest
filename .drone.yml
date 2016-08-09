@@ -21,7 +21,7 @@ publish:
     email: iwendellsun@gmail.com
     repo: wendell/droneTest
     tag: 
-      - $$BRANCH-($$COMMIT)
+      - $$BRANCH-$$COMMIT
       - latest
     load: docker/image.tar
     save:
