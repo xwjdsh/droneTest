@@ -5,11 +5,28 @@ build:
     - go build
     - go test
   bundle:
-   when:
-    branch: master
+    when:
+      branch: master
   clone:
-   path: github.com/xwjdsh/droneTest
+    path: github.com/xwjdsh/droneTest
   cache:
-   mount:
-    - vendor
-    - .git
+    mount:
+      - vendor
+      - .git
+publish:
+  docker:
+    registry: registry.sunwen.in
+    username: $$USERNAME
+    password: $$PASSWORD
+    email: iwendellsun@gmail.com
+    repo: wendell/droneTest
+    tag: 
+      - $$BRANCH-($$COMMIT)
+      - latest
+    load: docker/image.tar
+    save:
+      destination: docker/image.tar
+      tag: latest
+    cache:
+      mount:
+        - docker/image.tar
