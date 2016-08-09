@@ -4,3 +4,12 @@ build:
     - glide install
     - go build
     - go test
+  bundle:
+   when:
+    branch: master
+  clone:
+   path: github.com/xwjdsh/droneTest
+  cache:
+   mount:
+    - vendor
+    - .git
