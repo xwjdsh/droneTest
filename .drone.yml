@@ -13,6 +13,7 @@ build:
     mount:
       - vendor
       - .git
+
 publish:
   docker:
     registry: registry.sunwen.in
@@ -30,3 +31,11 @@ publish:
     cache:
       mount:
         - docker/image.tar
+
+deploy:
+  ssh:
+    host: $$SSH_HOST
+    user: $$SSH_USER
+    port: $$SSH_PORT
+    commands:
+      - cd ~/deploy;./drone-test.sh
