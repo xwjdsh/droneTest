@@ -21,7 +21,6 @@ publish:
     email: iwendellsun@gmail.com
     repo: wendell/droneTest
     tag: 
-      - $$BRANCH
       - latest
     load: docker/image.tar
     save:
